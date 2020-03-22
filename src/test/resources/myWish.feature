@@ -1,5 +1,5 @@
 Feature: Create an My Wish List
-  Scenario: Creating my   wishlist
+  Scenario: Creating my wishlist
 
 
     Given Go to the website
