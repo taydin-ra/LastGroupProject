@@ -14,16 +14,10 @@ public class cartSteps extends AbstractClass {
     WebDriver driver;
     accountPage ap = new accountPage();
     signInPage sp = new signInPage();
-    BuyItemPage bip = new BuyItemPage();
-    CartPage cp = new CartPage();
+    AddToCartPage acp = new AddToCartPage();
 
-    @And("^type to \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void typeToAnd(String arg0, String arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        sp.typeTheEmail(arg0);
-        sp.typeThePassword(arg1);
 
-    }
+
 
 
     @Given("^click to sign in button$")
@@ -37,12 +31,12 @@ public class cartSteps extends AbstractClass {
     @And("^navigate over the titles$")
     public void navigateOverTheTitles() throws InterruptedException {
 
-        bip.navigateOver();
+        acp.navigateOver();
     }
 
     @And("^click to women button$")
     public void clickToWomenButton() {
-        bip.clickWomenButton();
+        acp.clickWomenButton();
     }
 
     @And("^choose a random product$")
@@ -50,9 +44,9 @@ public class cartSteps extends AbstractClass {
 
 
 
-        bip.clickToListIcon();
+        acp.clickToListIcon();
         Thread.sleep(1000);
-        bip.clickRandomCartButton();
+        acp.clickRandomCartButton();
         Thread.sleep(1000);
 
 
@@ -61,7 +55,7 @@ public class cartSteps extends AbstractClass {
 
     @When("^click to Proceed to checkout$")
     public void clickToProceedToCheckout() throws InterruptedException {
-        bip.clickToCheckoutButton();
+        acp.clickToCheckoutButton();
 
         Thread.sleep(3000);
 
@@ -70,21 +64,22 @@ public class cartSteps extends AbstractClass {
 
     @Then("^cart shouldn't be empty$")
     public void cartShouldnTBeEmpty() {
-        cp.verifyToCart();
+        acp.verifyToCart();
 
 
     }
     @When("^click to remove button$")
     public void clickToRemoveButton() {
-
-        cp.clickRemoveTitle();
+            scrollDown();
+        acp.clickRemoveTitle();
     }
 
 
 
     @Then("^cart should be empty$")
-    public void cartShouldBeEmpty() {
-
+    public void cartShouldBeEmpty() throws InterruptedException {
+        Thread.sleep(3000);
+        acp.verifytoDelete();
     }
 
 

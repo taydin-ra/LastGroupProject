@@ -77,10 +77,10 @@ public abstract class AbstractClass {
 
 
 
-    public void randomMethodForClothes( List<WebElement> produckts) {
+    public void randomMethod( List<WebElement> random) {
 
-        int randomNum = randomGenerator(produckts.size());
-        clickOnFunctionalities(produckts.get(randomNum));
+        int randomNum = randomGenerator(random.size());
+        clickOnFunctionalities(random.get(randomNum));
 
 
     }
@@ -99,7 +99,7 @@ public abstract class AbstractClass {
 
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,270)", "");
+        js.executeScript("window.scrollBy(0,250)", "");
     }
 
 }
