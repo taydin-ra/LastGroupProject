@@ -18,11 +18,6 @@ public class accountPage extends AbstractClass {
         PageFactory.initElements(driver, this);
     }
 
-<<<<<<< HEAD
-    @FindBy(xpath = "//a[@class='login']")
-    private WebElement signInTab;
-
-=======
 
 
     @FindBy(css = "a[class='login']")
@@ -36,14 +31,13 @@ public class accountPage extends AbstractClass {
     @FindBy(xpath = "//*[@id='SubmitLogin']")
     private WebElement submitButton;
 
->>>>>>> origin/master
+
     public void clickOnSignInTab() {
 
         clickOnFunctionalities(signInTab);
     }
 
-<<<<<<< HEAD
-=======
+
     public void typeTheEmail(String email) {
         email = readProperties.getData("email");
 
@@ -58,5 +52,5 @@ public class accountPage extends AbstractClass {
     public void clickOnSignInButton() {
         clickOnFunctionalities(submitButton);
     }
->>>>>>> origin/master
+
 }

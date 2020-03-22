@@ -22,7 +22,7 @@ public class wishListPage extends  AbstractClass {
 
     }
 
-    // TODO  <3 Wish button <3 <3
+    // TODO  <3 Wish button <3 <3 <3
     @FindAll({
             @FindBy(xpath = "//a[contains(text(),'Add to Wishlist')]")
     })

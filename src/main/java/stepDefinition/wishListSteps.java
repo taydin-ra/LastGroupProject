@@ -7,7 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class wishListSteps {
-    AddToCartPage acp =          new AddToCartPage();
+    AddToCartPage acp =new AddToCartPage();
             wishListPage wlp = new wishListPage();
     @When("^click add to  wish list button$")
     public void click_add_to_wish_list_button() throws Throwable {
