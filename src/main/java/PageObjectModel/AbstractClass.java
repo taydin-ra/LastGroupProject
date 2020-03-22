@@ -36,7 +36,7 @@ public abstract class AbstractClass {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(clickElement));
 
-        } catch (Exception e) {
+        } catch (Exception e)    {
             System.out.println(e.getMessage());
         }
 
