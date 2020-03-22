@@ -7,11 +7,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
+
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+
 
 public abstract class AbstractClass {
     WebDriver driver;
@@ -102,5 +106,35 @@ public abstract class AbstractClass {
         js.executeScript("window.scrollBy(0,250)", "");
     }
 
+
+    public void selectInDropDown(WebElement dropdown){
+        Select select = new Select(dropdown);
+        List<WebElement> list = select.getOptions();
+
+            select.selectByIndex(39);
+
+    }
+
+
+    public void verifyURL(String expectedResult){
+
+
+        String URL = driver.getCurrentUrl();
+
+        Assert.assertTrue(URL.contains( expectedResult )  );
+
+    }
+
+    public void confirmAlert(){
+
+        driver.switchTo().alert().accept();  //to accept alert
+
+    }
+
+
+    public void verifyOrder(WebElement element, String exoected) {
+        String actual=element.getText();
+        Assert.assertEquals(actual,exoected);
+    }
 }
 
