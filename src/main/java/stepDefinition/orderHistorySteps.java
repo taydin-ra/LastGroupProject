@@ -19,7 +19,6 @@ public class orderHistorySteps extends AbstractClass {
         order.getTheAmountFromOrder();
     }
 
-
     @Given("^Click on Tugba Aydin tab$")
     public void click_on_Tugba_Aydin_tab() throws Throwable {
 
