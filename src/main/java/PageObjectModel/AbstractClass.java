@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-
 public abstract class AbstractClass {
     WebDriver driver;
     WebDriverWait wait;
@@ -112,12 +111,9 @@ public abstract class AbstractClass {
         List<WebElement> list = select.getOptions();
 
             select.selectByIndex(39);
-
     }
 
-
     public void verifyURL(String expectedResult){
-
 
         String URL = driver.getCurrentUrl();
 
@@ -135,6 +131,53 @@ public abstract class AbstractClass {
     public void verifyOrder(WebElement element, String exoected) {
         String actual=element.getText();
         Assert.assertEquals(actual,exoected);
+    }
+
+
+    public String getAmountFromConfirmation(WebElement element) {
+
+           String text = element.getText();
+
+           System.out.println(element.getText() + "<<<<<<<<<<<_-----------------text is here ");
+
+
+           return text;
+    }
+
+    public void verifyTotalPrice( List<WebElement> expected, String  element ){
+
+
+        boolean isTextExpected = false;
+
+        for (int i = 0; i < expected.size(); i++) {
+            String expectedText = expected.get(i).getText();
+            System.out.println(expectedText + ">>>>expectedlist");
+
+            System.out.println(element + ">>>>>>>>>>>>>>element");
+
+            if(expectedText.trim().equalsIgnoreCase(element)){
+                 isTextExpected = true;
+                 break;
+            }else {
+                isTextExpected = false;
+            }
+        }
+
+        if(isTextExpected){
+            System.out.println("application is fine");
+        }else{
+            Assert.assertTrue(false);
+        }
+
+    }
+
+    public void sleep(int num){
+
+        try{
+            Thread.sleep(num * 1000);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
 

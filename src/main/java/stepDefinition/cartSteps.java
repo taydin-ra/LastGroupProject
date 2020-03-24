@@ -39,6 +39,7 @@ public class cartSteps extends AbstractClass {
         acp.clickWomenButton();
     }
 
+
     @And("^choose a random product$")
     public void chooseARandomProduct() throws InterruptedException {
 

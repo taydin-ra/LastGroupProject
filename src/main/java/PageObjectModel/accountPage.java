@@ -20,7 +20,9 @@ public class accountPage extends AbstractClass {
 
 
 
+
     @FindBy(css = "a[class='login']")
+
     private WebElement signInTab;
 
     @FindBy(xpath = "//input[@id='email']")
