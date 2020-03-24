@@ -1,5 +1,7 @@
 Feature: Add to cart and remove
+  @SmokeTest
   Scenario: Add to cart and remove
+
 
     Given Go to the website
     And Click on Sign In Tab

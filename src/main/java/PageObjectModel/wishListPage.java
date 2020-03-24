@@ -124,6 +124,7 @@ public class wishListPage extends  AbstractClass {
 
 
     public void verifyDeleteMyList() {
+        Assert.assertFalse(table.isDisplayed());
 
 
     }
