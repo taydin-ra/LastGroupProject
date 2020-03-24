@@ -11,8 +11,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class AddToCartPage extends AbstractClass {
-
+public class AddToCartPage extends AbstractClass{
 
     WebDriver driver;
 
@@ -87,7 +86,7 @@ public class AddToCartPage extends AbstractClass {
 
 
     public void clickRandomCartButton() {
-        randomMethodForClothes(listOfCartButtons);
+        randomMethod(listOfCartButtons);
     }
 
 
@@ -129,8 +128,18 @@ public class AddToCartPage extends AbstractClass {
     }
 
 
-    private void verifytoDelete() {
+    public void verifytoDelete() {
+
+        String message = "Your shopping cart is empty.";
+        String actual = alertMessage.getText().trim();
+        if (message.equals(actual)) {
+            System.out.println("it is verified");
+        } else {
+            Assert.fail("not verified");
+        }
+    }
 
 
     }
-}
+
+
