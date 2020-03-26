@@ -1,4 +1,5 @@
 Feature: Add a new address
+  @SmokeTest
   Scenario: Adding a new address
 
 
@@ -11,6 +12,6 @@ Feature: Add a new address
     And Type to "address" and "city" and "postcode" and "mobile" and "title"
     And Click on Save button of address
     Then Click on Delete Button
-    
+
 
 

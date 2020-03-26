@@ -46,9 +46,9 @@ public class cartSteps extends AbstractClass {
 
 
         acp.clickToListIcon();
-        Thread.sleep(1000);
+
         acp.clickRandomCartButton();
-        Thread.sleep(1000);
+
 
 
     }
@@ -58,7 +58,7 @@ public class cartSteps extends AbstractClass {
     public void clickToProceedToCheckout() throws InterruptedException {
         acp.clickToCheckoutButton();
 
-        Thread.sleep(3000);
+
 
 
     }
@@ -79,7 +79,7 @@ public class cartSteps extends AbstractClass {
 
     @Then("^cart should be empty$")
     public void cartShouldBeEmpty() throws InterruptedException {
-        Thread.sleep(3000);
+
         acp.verifytoDelete();
     }
 

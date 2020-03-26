@@ -3,11 +3,11 @@ package PageObjectModel;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import java.util.List;
 
 public class BuyItemPage extends AbstractClass {
-
 
     @FindBy(css = "input[placeholder='Search']")
     private WebElement searchBox;
@@ -45,7 +45,6 @@ public class BuyItemPage extends AbstractClass {
     @FindBy(xpath = "//strong[text()='Your order on My Store is complete.']")
     private WebElement orderCompleteSentence;
 
-
     public void typeTheSearchBox(String item) {
 
         sendKeysFunction(searchBox, item);
@@ -57,8 +56,7 @@ public class BuyItemPage extends AbstractClass {
     }
 
     public void clickOnAnyItem() {
-
-        randomMethodForClothes(dressesList);
+        randomMethod(dressesList);
     }
 
     public void clickOnListView() {
@@ -76,7 +74,6 @@ public class BuyItemPage extends AbstractClass {
     public void clickOnProceedToChechoutSignIn() {
         clickOnFunctionalities(proceedToCheckOutButtonOgSignInPart);
     }
-
 
     public void clickOnProceedToCheckOutAdressPart() {
         clickOnFunctionalities(proceedToCheckOutAdreesPart);

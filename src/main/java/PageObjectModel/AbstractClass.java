@@ -128,9 +128,10 @@ public abstract class AbstractClass {
     }
 
 
-    public void verifyOrder(WebElement element, String exoected) {
+    public void verifyOrder(WebElement element, String expected) {
         String actual=element.getText();
-        Assert.assertEquals(actual,exoected);
+        Assert.assertEquals(actual,expected);
+
     }
 
 
