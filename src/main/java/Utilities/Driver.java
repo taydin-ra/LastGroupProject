@@ -21,5 +21,11 @@ public class Driver {
     }
 
 
+    public static void closeBrowser() {
+        if (driver!=null){     //if browser is still open
+            driver.quit();
+            driver = null;
+        }
+    }
 }
 

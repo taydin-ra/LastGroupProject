@@ -17,7 +17,7 @@ Feature: Verify Order History
     And Click on Proceed to Checkout Button Last Part
     And Click on Pay by bank wire tab
     And Click on I confirm my order button
-
+  @SmokeTest
   Scenario: Verifying Order History
     And Get the amount from order confirmation
     And Click on Tugba Aydin tab

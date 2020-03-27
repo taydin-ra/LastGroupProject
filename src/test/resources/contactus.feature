@@ -5,7 +5,7 @@ Feature: Contact Us
     And Click on Sign In Tab
     And type to "email" and "password"
     And Click on Sign In Button
-
+  @SmokeTest
   Scenario: Contact us
     And Click on Contact Us Tab
     And Select Subject Heading
