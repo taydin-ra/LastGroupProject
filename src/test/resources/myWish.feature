@@ -1,4 +1,5 @@
 Feature: Create an My Wish List
+  @SmokeTest
   Scenario: Creating my wishlist
 
 

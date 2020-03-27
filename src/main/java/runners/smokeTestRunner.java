@@ -1,12 +1,15 @@
 package runners;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
 
+@RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
                 "html:target/cucumber-report",
                 "json:target/cucumber.json",
+                "rerun:target/rerun.txt"
         },
         glue={"stepDefinition"},
         features = {"src/test/resources"},
@@ -17,5 +20,5 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 )
-public class smokeTestRunner extends AbstractTestNGCucumberTests {
+public class smokeTestRunner {
 }

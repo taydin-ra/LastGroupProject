@@ -1,5 +1,5 @@
 Feature: Editing personal information
-
+  @SmokeTest
   Scenario: Editing personal information
 
     Given Go to the website
