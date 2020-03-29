@@ -3,7 +3,7 @@ package PageObjectModel;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
+
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public class BuyItemPage extends AbstractClass {
     private WebElement searchButton;
 
     @FindAll({
-            @FindBy(xpath = "//img[@class='replace-2x img-responsive']")
+            @FindBy(xpath = "//h5[@itemprop='name']//a")
     })
     private List<WebElement> dressesList;
     @FindBy(xpath = "//i[@class='icon-th-list']")

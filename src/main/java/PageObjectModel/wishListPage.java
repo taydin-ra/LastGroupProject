@@ -1,6 +1,7 @@
 package PageObjectModel;
 
 import Utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+
 
 import java.util.List;
 
@@ -64,6 +65,13 @@ public class wishListPage extends  AbstractClass {
 
     @FindBy(xpath = "//table[@class='table table-bordered']")
     private WebElement table;
+
+    @FindAll({
+            @FindBy(xpath = "//table//tbody//tr")
+    }
+
+    )
+    private List<WebElement> tableList;
 
 
     public void clickRandomWishButton() {
@@ -124,7 +132,7 @@ public class wishListPage extends  AbstractClass {
 
 
     public void verifyDeleteMyList() {
-        Assert.assertFalse(table.isDisplayed());
+        Assert.assertTrue(tableList.size()==0);
 
 
     }
