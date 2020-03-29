@@ -7,7 +7,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import gherkin.lexer.Th;
+
 import org.openqa.selenium.WebDriver;
 public class cartSteps extends AbstractClass {
 
@@ -80,6 +80,7 @@ public class cartSteps extends AbstractClass {
     @Then("^cart should be empty$")
     public void cartShouldBeEmpty() throws InterruptedException {
 
+        acp.sleep(2);
         acp.verifytoDelete();
     }
 
